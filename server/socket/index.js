@@ -16,6 +16,7 @@ const io = new Server(server,{
         credentials : true
     }
 })
+console.log('io',io)
 
 /***
  * socket running at http://localhost:8080/

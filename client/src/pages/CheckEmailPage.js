@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import { IoClose } from "react-icons/io5";
 import { Link, useNavigate } from 'react-router-dom';
-import uploadFile from '../helpers/uploadFile';
 import axios from 'axios'
 import toast from 'react-hot-toast';
 import { PiUserCircle } from "react-icons/pi";
@@ -28,10 +26,10 @@ const CheckEmailPage = () => {
     e.stopPropagation()
 
     const URL = `${process.env.REACT_APP_BACKEND_URL}/api/email`
-
+     console.log('url',URL)
     try {
         const response = await axios.post(URL,data)
-
+          console.log("response",response);
         toast.success(response.data.message)
 
         if(response.data.success){

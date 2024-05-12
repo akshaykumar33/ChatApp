@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
   });
-
+console.log("in index urls process.env",process.env.FRONTEND_URL)
 app.use(express.json())
 app.use(cookiesParser())
 
