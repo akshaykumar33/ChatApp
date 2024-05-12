@@ -51,7 +51,7 @@ const EditUserDetails = ({onClose,user}) => {
         setData((preve)=>{
         return{
             ...preve,
-            profile_pic : uploadPhoto?.url
+            profile_pic : uploadPhoto?.secure_url
         }
         })
     }

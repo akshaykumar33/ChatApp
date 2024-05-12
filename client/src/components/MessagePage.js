@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
@@ -56,7 +57,7 @@ const MessagePage = () => {
     setMessage(preve => {
       return{
         ...preve,
-        imageUrl : uploadPhoto.url
+        imageUrl : uploadPhoto.secure_url
       }
     })
   }
@@ -80,7 +81,7 @@ const MessagePage = () => {
     setMessage(preve => {
       return{
         ...preve,
-        videoUrl : uploadPhoto.url
+        videoUrl : uploadPhoto.secure_url
       }
     })
   }
